@@ -1,9 +1,22 @@
+import logo from "./logo.svg";
+import "./App.css";
+import Nav from "./components/Nav";
+import Slider from "./components/Slider";
+import FeaturedProducts from "./components/FeaturedProducts";
+import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div>
-      This App is for Divine Dry Fruits
-    </div>
+    <>
+      <Nav />
+      <Slider />
+      <FeaturedProducts />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 
