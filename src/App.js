@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
 import Nav from "./components/Nav";
 import Slider from "./components/Slider";
 import FeaturedProducts from "./components/FeaturedProducts";
