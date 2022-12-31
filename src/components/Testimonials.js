@@ -1,6 +1,5 @@
 import React from "react";
 import { Navigation, A11y } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
