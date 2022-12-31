@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Faq() {
-    return (
-        <div>Faq</div>
-    )
+  return <div>Faq must be an accordiosan</div>;
 }
