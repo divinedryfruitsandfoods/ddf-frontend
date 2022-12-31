@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function About() {
     return (
-        <div>About US</div>
+        <>
+            <div>About US is pending</div>
+        </>
+
     )
 }
