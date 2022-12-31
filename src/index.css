@@ -31,10 +31,12 @@ code {
 }
 
 .ddfLogo {
-  max-width: 15%;
+  /* max-width: 15%; */
   border-radius: 50%;
 }
-
+.navBarLogo {
+  max-width: 5%;
+}
 .bg-customNav {
   background-color: #020c4d;
   color: #fd9e1b;

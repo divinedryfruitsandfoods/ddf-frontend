@@ -9,7 +9,7 @@ function Nav() {
     <>
       {/* second navigation bar */}
       <nav className="flex items-center justify-between flex-wrap bg-customNav p-6">
-        <NavLink to="/" className="flex items-center flex-shrink-0  mr-6">
+        <NavLink to="/" className="flex items-center flex-shrink-0  mr-6 navBarLogo">
           <img alt="DDF logo" src="/images/logo.jpg" className="ddfLogo" />
           {/* <span className="font-semibold text-xm tracking-tight">Home</span> */}
         </NavLink>
