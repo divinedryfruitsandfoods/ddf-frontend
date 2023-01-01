@@ -23,7 +23,6 @@ export default function AllProducts() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

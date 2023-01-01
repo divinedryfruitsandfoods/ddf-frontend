@@ -6,18 +6,16 @@ import Slider from "./Slider";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 
-
 function Home() {
-    return (
-        <>
-            <Slider />
-            <FeaturedProducts />
-            <Testimonials />
-            <Contact />
-            <Faq />
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Slider />
+      <FeaturedProducts />
+      <Testimonials />
+      <Contact />
+      <Faq />
+    </>
+  );
 }
 
 export default Home;

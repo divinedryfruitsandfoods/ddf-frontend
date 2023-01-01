@@ -7,6 +7,7 @@ import Registration from "./components/Registration";
 import About from "./components/About";
 import NotFound from "./components/NotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             {" "}
           </Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
