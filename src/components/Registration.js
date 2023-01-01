@@ -3,7 +3,7 @@ import React from "react";
 function Registration() {
   return (
     <>
-      <section className="h-full gradient-form bg-gray-200 ">
+      <section className="h-full gradient-form bg-gray-200 mt-16">
         <div className="container py-12 px-6 h-full m-auto">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
             <div className="xl:w-10/12">
