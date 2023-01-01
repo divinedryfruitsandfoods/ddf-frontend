@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import Footer from "../Footer";
-import CategoriesAccordion from "../category/CategoriesAccordion";
 import CategoriesSlider from "../category/CategoriesSlider";
 import ProductCard from "./ProductCard";
 import axios from "axios";
@@ -16,9 +15,6 @@ export default function AllProducts() {
     <>
       <section className="container m-auto my-5 mt-16">
         <div className="grid grid-cols-4 gap-4">
-          <div className="">
-            <CategoriesAccordion />
-          </div>
           <div className="col-span-3 ...">
             <div className="swiper-container CategorieSlider !overflow-hidden">
               <CategoriesSlider categories={categories} />
