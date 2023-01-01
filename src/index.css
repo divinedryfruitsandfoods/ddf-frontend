@@ -15,7 +15,7 @@ code {
 
 .active {
   color: #fff;
-  border-bottom: thin solid #fff;
+  /* border-bottom: thin solid #fff; */
 }
 
 .costPrice {
@@ -40,4 +40,7 @@ code {
 .bg-customNav {
   background-color: #020c4d;
   color: #fd9e1b;
+}
+.CategorieSlider .swiper-slide {
+  box-shadow: 1px 1px 1px 1px #ccc;
 }
