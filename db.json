@@ -10,42 +10,42 @@
         {
             "id": 1,
             "category_name": "Almonds",
-            "category_description": "100 % Premium California Almonds"
+            "sub_category_name": "California"
         },
         {
             "id": 2,
             "category_name": "Almonds",
-            "category_description": "Natural Premium American Dried Almonds 500g Pack Pouch | Premium Badam Giri | High in Fiber & Boost Immunity | Real Nuts | Gluten Free"
+            "sub_category_name": "American"
         },
         {
             "id": 3,
             "category_name": "Cashew",
-            "category_description": "Natural Premium Whole Cashews 500g Value Pack |Whole Crunchy Cashew | Premium Kaju nuts | Nutritious & Delicious | Gluten Free & Plant based Protein"
+            "sub_category_name": "W200"
         },
         {
             "id": 4,
-            "category_name": "Walnut",
-            "category_description": "Natural Dried Kashmiri Walnut Kernels 200g | Premium Akrot Giri | Rich in Protein & Iron | Low Calorie Nut | 0g Trans Fat & Cholesterol Free"
+            "category_name": "Cashew",
+            "sub_category_name": "W400"
         },
         {
             "id": 5,
             "category_name": "Walnut",
-            "category_description": "Premium Kashmiri Walnut Without Shell, Akhrot Giri, Walnut Kernel(200g)"
+            "sub_category_name": "American"
         },
         {
             "id": 6,
             "category_name": "Dates",
-            "category_description": "Flyberry Gourmet Medjoul/Mejdool Dates 500g | Jumbo Size | Khajur | Alternative to Sugar | Best For Kids & Adults | No artificial colours | Naturally Sweet | Instant Energy | Gluten Free, Non GMO"
+            "sub_category_name": "Medjoul"
         },
         {
             "id": 7,
             "category_name": "Dates",
-            "category_description": "Premium International Omani Dates 680g Value Pack | Khajoor or Khajur Dry Fruit | Healthy & Nutritious Snack | Rich in Protein & Vitamins | Natural Sweetener"
+            "sub_category_name": "Omani"
         },
         {
             "id": 8,
             "category_name": "Pista",
-            "category_description": "Premium Californian Roasted & Salted Pistachios 500 gms Value Pack | Pista Dry Fruit, Shelled Nuts Super Crunchy & Delicious Healthy Snack | Vitamins & Minerals Rich"
+            "sub_category_name": "California Salted"
         }
     ]
 }
