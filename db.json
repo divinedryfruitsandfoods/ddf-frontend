@@ -1,0 +1,51 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "category_name": "Almonds",
+            "category_description": "100 % Premium California Almonds"
+        },
+        {
+            "id": 2,
+            "category_name": "Almonds",
+            "category_description": "Natural Premium American Dried Almonds 500g Pack Pouch | Premium Badam Giri | High in Fiber & Boost Immunity | Real Nuts | Gluten Free"
+        },
+        {
+            "id": 3,
+            "category_name": "Cashew",
+            "category_description": "Natural Premium Whole Cashews 500g Value Pack |Whole Crunchy Cashew | Premium Kaju nuts | Nutritious & Delicious | Gluten Free & Plant based Protein"
+        },
+        {
+            "id": 4,
+            "category_name": "Walnut",
+            "category_description": "Natural Dried Kashmiri Walnut Kernels 200g | Premium Akrot Giri | Rich in Protein & Iron | Low Calorie Nut | 0g Trans Fat & Cholesterol Free"
+        },
+        {
+            "id": 5,
+            "category_name": "Walnut",
+            "category_description": "Premium Kashmiri Walnut Without Shell, Akhrot Giri, Walnut Kernel(200g)"
+        },
+        {
+            "id": 6,
+            "category_name": "Dates",
+            "category_description": "Flyberry Gourmet Medjoul/Mejdool Dates 500g | Jumbo Size | Khajur | Alternative to Sugar | Best For Kids & Adults | No artificial colours | Naturally Sweet | Instant Energy | Gluten Free, Non GMO"
+        },
+        {
+            "id": 7,
+            "category_name": "Dates",
+            "category_description": "Premium International Omani Dates 680g Value Pack | Khajoor or Khajur Dry Fruit | Healthy & Nutritious Snack | Rich in Protein & Vitamins | Natural Sweetener"
+        },
+        {
+            "id": 8,
+            "category_name": "Pista",
+            "category_description": "Premium Californian Roasted & Salted Pistachios 500 gms Value Pack | Pista Dry Fruit, Shelled Nuts Super Crunchy & Delicious Healthy Snack | Vitamins & Minerals Rich"
+        }
+    ]
+}
