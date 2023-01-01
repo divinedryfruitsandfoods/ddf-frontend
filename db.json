@@ -9,21 +9,25 @@
     "categories": [
         {
             "id": 1,
+            "category_image": "",
             "category_name": "Almonds",
             "sub_category_name": "California"
         },
         {
             "id": 2,
+            "category_image": "",
             "category_name": "Almonds",
             "sub_category_name": "American"
         },
         {
             "id": 3,
+            "category_image": "",
             "category_name": "Cashew",
             "sub_category_name": "W200"
         },
         {
             "id": 4,
+            "category_image": "",
             "category_name": "Cashew",
             "sub_category_name": "W400"
         },
@@ -39,11 +43,13 @@
         },
         {
             "id": 7,
+            "category_image": "",
             "category_name": "Dates",
             "sub_category_name": "Omani"
         },
         {
             "id": 8,
+            "category_image": "",
             "category_name": "Pista",
             "sub_category_name": "California Salted"
         }

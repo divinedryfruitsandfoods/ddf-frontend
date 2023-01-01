@@ -8,7 +8,9 @@ export default function AllProducts() {
   const [categories, setCategories] = useState([]);
   useEffect(() => { getCategories(); }, [])
   const getCategories = async () => {
-    const result = await axios.get("http://localhost:3333/categories");
+    const result = await axios.get("http://localhost:3333/categories").catch((err) => {
+      console.log(err.message);
+    });
     setCategories(result.data);
   }
   return (

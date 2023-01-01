@@ -14,6 +14,7 @@ function Home() {
       <Testimonials />
       <Contact />
       <Faq />
+      <Footer />
     </>
   );
 }
