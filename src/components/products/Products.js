@@ -6,18 +6,20 @@ import ProductCard from "./ProductCard";
 import axios from "axios";
 export default function AllProducts() {
   const [categories, setCategories] = useState([]);
-  useEffect(() => { getCategories(); }, [])
+  useEffect(() => {
+    getCategories();
+  }, []);
   const getCategories = async () => {
     const result = await axios.get("http://localhost:3333/categories").catch((err) => {
       console.log(err.message);
     });
     setCategories(result.data);
-  }
+  };
   return (
     <>
       <section className="container m-auto my-5 mt-16">
-        <div className="grid grid-cols-4 gap-4">
-          <div className="col-span-3 ...">
+        <div className="grid grid-cols-1">
+          <div className="col-span-3">
             <div className="swiper-container CategorieSlider !overflow-hidden">
               <CategoriesSlider categories={categories} />
             </div>
