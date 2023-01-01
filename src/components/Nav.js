@@ -23,7 +23,7 @@ function Nav() {
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow">
-            <NavLink to="/allProducts" className="block mt-4 lg:inline-block lg:mt-0  hover:text-white mr-4">
+            <NavLink to="/products" className="block mt-4 lg:inline-block lg:mt-0  hover:text-white mr-4">
               Products
             </NavLink>
             <NavLink to="/about" className="block mt-4 lg:inline-block lg:mt-0  hover:text-white mr-4">

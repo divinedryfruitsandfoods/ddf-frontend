@@ -2,7 +2,8 @@ import React from "react";
 import { Navigation, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Product from "./Product";
+// 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,9 +12,8 @@ import "swiper/css/scrollbar";
 
 import { Fragment, useState } from "react";
 import { Accordion, AccordionHeader, AccordionBody, Radio } from "@material-tailwind/react";
-import Nav from "./Nav";
-import Footer from "./Footer";
-export default function AllProducts() {
+import Footer from "../Footer";
+export default function Products() {
   const [open, setOpen] = useState(1);
 
   const handleOpen = (value) => {
@@ -123,22 +123,7 @@ export default function AllProducts() {
                 </SwiperSlide>
               </Swiper>
             </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4  mt-10 ">
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img className="w-full" src="http://kolambkarashutosh.000webhostapp.com/al/img/product_01.png" alt="Sunset in the mountains" />
-                <div className="costPrice">
-                  <b>&#8377; 1000/kg</b> <strike>&#8377; 10000</strike>{" "}
-                </div>
-                <div className="px-3">
-                  <div className="font-bold text-xl">California Almonds</div>
-                </div>
-                <div className="px-3">
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                </div>
-              </div>
-            </div>
+            <Product />
           </div>
         </div>
       </section>
