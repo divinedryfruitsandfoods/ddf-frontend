@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Popup from 'react-animated-popup'
 
 
-export default function AddCategory({ visible }) {
+export default function AddCategory({ visible, setVisible }) {
     return (
         <>
             <Popup visible={visible} onClose={() => setVisible(false)}>
