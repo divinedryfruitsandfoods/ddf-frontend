@@ -15,17 +15,18 @@ const containerStyle = {
 };
 
 const buttonStyle = {
-  backgroundColor: "cadetblue",
-  color: "#fff",
-  padding: 10,
   cursor: "pointer",
+  background: "blue",
+  textAlign: "right",
+  float: "right",
+  padding: "5px",
+  borderRadius: "10px"
 };
 
 const pStyle = {
   textAlign: "center",
 };
 
-const addCategoryStyles = "bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-0 px-1 border border-blue-500 hover:border-transparent rounded";
 const updateCategoryStyles = "bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-0 px-1 border border-green-500 hover:border-transparent rounded";
 const deleteCategoryStyles = "bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-0 px-1 border border-red-500 hover:border-transparent rounded";
 const categorySliderBlockquote = "rounded-lg bg-gray-100 p-2";
@@ -36,12 +37,12 @@ function CategoriesSlider({ categories }) {
   const [visible, setVisible] = useState(false);
   return (
     <>
-      <NavLink to="/products/addcategory">
-        <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-0 px-1 border border-blue-500 hover:border-transparent rounded">
+      <div style={buttonStyle} onClick={() => setVisible(!visible)}>
+        <NavLink to="/products/addcategory">
           <MdAddShoppingCart />
-          <AddCategory visible={visible} />
-        </button>
-      </NavLink>
+          <AddCategory visible={visible} setVisible={setVisible} />
+        </NavLink>
+      </div>
       <Swiper
         // install Swiper modules
         modules={[Navigation, A11y]}
@@ -69,16 +70,7 @@ function CategoriesSlider({ categories }) {
               <blockquote className={categorySliderBlockquote}>
                 <div className={categorySliderFlexItems}>
                   <div className={mt4}>
-                    <p className={categoryName}> {cat.category_name}</p>
-                    <div style={buttonStyle} onClick={() => setVisible(!visible)}>
-                      Show popup!
-                    </div>
-                    <NavLink to="/products/addcategory">
-                      <button className={addCategoryStyles}>
-                        <MdAddShoppingCart />
-                        <AddCategory visible={visible} />
-                      </button>
-                    </NavLink>
+                    <p className={categoryName}> {cat.categoryName}</p>
                     <NavLink to="/products/updatecategory">
                       <button className={updateCategoryStyles}>
                         <GrUpdate />
