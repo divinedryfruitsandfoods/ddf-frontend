@@ -18,7 +18,7 @@ function Footer() {
           </NavLink>
         </li>
         <li className="mr-4">
-          <NavLink to="/about" className="mr-4 hover:underline md:mr-6">
+          <NavLink to="/faq" className="mr-4 hover:underline md:mr-6">
             FAQ
           </NavLink>
         </li>

@@ -13,7 +13,6 @@ function Home() {
       <FeaturedProducts />
       <Testimonials />
       <Contact />
-      <Faq />
       <Footer />
     </>
   );

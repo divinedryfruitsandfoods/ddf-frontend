@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import AddCategory from "./components/category/AddCategory";
 import EditCategory from "./components/category/UpdateCategory";
+import Faq from "./components/Faq";
 
 function App() {
   return (
@@ -19,13 +20,18 @@ function App() {
         <Routes>
           <Route activeClassName="active_class" exact path="/" element={<Home />}></Route>
           <Route activeClassName="active_class" exact path="/products" element={<Products />}>
-            <Route activeClassName="active_class" path="addcategory" element={<AddCategory />}> </Route>
-            <Route activeClassName="active_class" path="updatecategory" element={<EditCategory />}> </Route>
+            <Route activeClassName="active_class" path="addcategory" element={<AddCategory />}>
+              {" "}
+            </Route>
+            <Route activeClassName="active_class" path="updatecategory" element={<EditCategory />}>
+              {" "}
+            </Route>
           </Route>
           <Route activeClassName="active_class" exact path="/about" element={<About />}></Route>
           <Route activeClassName="active_class" exact path="/contact" element={<Contact />}></Route>
           <Route activeClassName="active_class" exact path="/register" element={<Registration />}></Route>
           <Route activeClassName="active_class" exact path="/login" element={<Login />}></Route>
+          <Route activeClassName="active_class" exact path="/faq" element={<Faq />}></Route>
           <Route path="*" element={<NotFound />}>
             {" "}
           </Route>

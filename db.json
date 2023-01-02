@@ -1,57 +1,214 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "title": "json-server",
-            "author": "typicode"
-        }
-    ],
-    "categories": [
-        {
-            "id": 1,
-            "category_image": "",
-            "category_name": "Almonds",
-            "sub_category_name": "California"
-        },
-        {
-            "id": 2,
-            "category_image": "",
-            "category_name": "Almonds",
-            "sub_category_name": "American"
-        },
-        {
-            "id": 3,
-            "category_image": "",
-            "category_name": "Cashew",
-            "sub_category_name": "W200"
-        },
-        {
-            "id": 4,
-            "category_image": "",
-            "category_name": "Cashew",
-            "sub_category_name": "W400"
-        },
-        {
-            "id": 5,
-            "category_name": "Walnut",
-            "sub_category_name": "American"
-        },
-        {
-            "id": 6,
-            "category_name": "Dates",
-            "sub_category_name": "Medjoul"
-        },
-        {
-            "id": 7,
-            "category_image": "",
-            "category_name": "Dates",
-            "sub_category_name": "Omani"
-        },
-        {
-            "id": 8,
-            "category_image": "",
-            "category_name": "Pista",
-            "sub_category_name": "California Salted"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "productName": "California Almonds",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    },
+    {
+      "id": 2,
+      "productName": "Kolhapuri Cashew",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    },
+    {
+      "id": 3,
+      "productName": "Walnuts",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    },
+    {
+      "id": 4,
+      "productName": "Anjeer",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    },
+    {
+      "id": 5,
+      "productName": "Raisines",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    },
+    {
+      "id": 6,
+      "productName": "Kashmiri Cashew",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    },
+    {
+      "id": 7,
+      "productName": "Indian wallnuts",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    },
+    {
+      "id": 8,
+      "productName": "Goan Cashew",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    },
+    {
+      "id": 9,
+      "productName": "Anjeer",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    },
+    {
+      "id": 9,
+      "productName": "rajasthani Cashew",
+      "productImageUrl": "",
+      "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "productPrice": "1000",
+      "quality": "Best",
+      "quantity": "100kg",
+      "flavour": "Delicious",
+      "weight": "400",
+      "weightType": "gms",
+      "form": "typicode",
+      "createdBy": "typicode",
+      "updatedBy": "typicode",
+      "updatedOn": "typicode"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "categoryImageUrl": "",
+      "categoryName": "Almonds",
+      "subCategoryName": "California"
+    },
+    {
+      "id": 2,
+      "categoryImageUrl": "",
+      "categoryName": "Almonds",
+      "subCategoryName": "American"
+    },
+    {
+      "id": 3,
+      "categoryImageUrl": "",
+      "categoryName": "Cashew",
+      "subCategoryName": "W200"
+    },
+    {
+      "id": 4,
+      "categoryImageUrl": "",
+      "categoryName": "Cashew",
+      "subCategoryName": "W400"
+    },
+    {
+      "id": 5,
+      "categoryImageUrl": "",
+      "categoryName": "Walnut",
+      "subCategoryName": "American"
+    },
+    {
+      "id": 6,
+      "categoryImageUrl": "",
+      "categoryName": "Dates",
+      "subCategoryName": "Medjoul"
+    },
+    {
+      "id": 7,
+      "categoryImageUrl": "",
+      "categoryName": "Dates",
+      "subCategoryName": "Omani"
+    },
+    {
+      "id": 8,
+      "categoryImageUrl": "",
+      "categoryName": "Pista",
+      "subCategoryName": "California Salted"
+    }
+  ]
 }
