@@ -36,6 +36,12 @@ function CategoriesSlider({ categories }) {
   const [visible, setVisible] = useState(false);
   return (
     <>
+      <NavLink to="/products/addcategory">
+        <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-0 px-1 border border-blue-500 hover:border-transparent rounded">
+          <MdAddShoppingCart />
+          <AddCategory visible={visible} />
+        </button>
+      </NavLink>
       <Swiper
         // install Swiper modules
         modules={[Navigation, A11y]}
