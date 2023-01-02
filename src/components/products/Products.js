@@ -23,6 +23,20 @@ export default function AllProducts() {
     setCategories(result.data);
   };
 
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    getProducts();
+  }, []);
+  const getProducts = async () => {
+    const result = await axios.get("http://localhost:3333/products").catch((err) => {
+      console.log(err.message);
+    });
+    console.log("Result");
+    console.log(result);
+
+    setProducts(result.data);
+  };
+
   return (
     <>
       <section className={productsSection}>
@@ -32,7 +46,7 @@ export default function AllProducts() {
               <CategoriesSlider categories={categories} />
             </div>
             <div className={productCardStyle}>
-              <ProductCard />
+              <ProductCard products={products} />
             </div>
           </div>
         </div>
