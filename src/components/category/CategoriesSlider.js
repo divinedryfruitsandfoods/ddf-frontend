@@ -84,9 +84,7 @@ function CategoriesSlider({ categories, deleteCategory }) {
                 <div className={categorySliderFlexItems}>
                   <div className={mt4}>
                     <p className={categoryName}> {cat.categoryName}</p>
-                    <button
-                      onClick={(e, id) => updateCategory(e, cat.id)}
-                      className={updateCategoryStyles}>
+                    <button onClick={(e, id) => updateCategory(e, cat.id)} className={updateCategoryStyles}>
                       <GrUpdate />
                     </button>
                     <button className={deleteCategoryStyles}>
