@@ -50,7 +50,6 @@ function CategoriesSlider({ categories, deleteCategory }) {
           <MdAddShoppingCart />
         </NavLink>
         <AddCategory visible={visible} setVisible={setVisible} />
-
       </div>
       <Swiper
         // install Swiper modules
@@ -80,9 +79,7 @@ function CategoriesSlider({ categories, deleteCategory }) {
                 <div className={categorySliderFlexItems}>
                   <div className={mt4}>
                     <p className={categoryName}> {cat.categoryName}</p>
-                    <button
-                      onClick={(e, id) => updateCategory(e, cat.id)}
-                      className={updateCategoryStyles}>
+                    <button onClick={(e, id) => updateCategory(e, cat.id)} className={updateCategoryStyles}>
                       <GrUpdate />
                     </button>
                     <button className={deleteCategoryStyles}>
