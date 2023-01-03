@@ -45,30 +45,33 @@ export default function UpdateCategory() {
   };
   return (
     <>
-      <form className={updateCategoryForm}>
-        <div className={updateCategoryNameDiv}>
-          <input type="name" name="categoryName" id="categoryName"
-            value={category.categoryName}
-            onChange={(e) => handleChange(e)}
-            placeholder="Enter Category Name" className={updateCategoryName} />
-        </div>
-        <div className={updateSubCategoryNameDiv}>
-          <input type="name" name="subCategoryName" id="subCategoryName"
-            value={category.subCategoryName}
-            onChange={(e) => handleChange(e)}
-            placeholder="Enter Sub Category Name" className={updateCategoryName} />
-        </div>
-        <button type="submit"
-          onClick={updateCategory}
-          className={updateCategorySubmit}>
-          Update
-        </button>
-        <button type="submit"
-          onClick={() => navigate("/products")}
-          className={updateCategorySubmit}>
-          Cancel
-        </button>
-      </form>
+
+      <Popup visible={visible} onClose={() => setVisible(false)}>
+        <form className={updateCategoryForm}>
+          <div className={updateCategoryNameDiv}>
+            <input type="name" name="categoryName" id="categoryName"
+              value={category.categoryName}
+              onChange={(e) => handleChange(e)}
+              placeholder="Enter Category Name" className={updateCategoryName} />
+          </div>
+          <div className={updateSubCategoryNameDiv}>
+            <input type="name" name="subCategoryName" id="subCategoryName"
+              value={category.subCategoryName}
+              onChange={(e) => handleChange(e)}
+              placeholder="Enter Sub Category Name" className={updateCategoryName} />
+          </div>
+          <button type="submit"
+            onClick={updateCategory}
+            className={updateCategorySubmit}>
+            Update
+          </button>
+          <button type="submit"
+            onClick={() => navigate("/products")}
+            className={updateCategorySubmit}>
+            Cancel
+          </button>
+        </form>
+      </Popup>
     </>
   );
 }

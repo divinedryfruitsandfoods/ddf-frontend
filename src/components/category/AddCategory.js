@@ -22,11 +22,10 @@ export default function AddCategory({ visible, setVisible }) {
 
   const saveCategory = (e) => {
     e.preventDefault();
-    CategoryService.saveCategory(category)
-      .then((response) => {
-        console.log(response);
-        navigate("/products");
-      })
+    CategoryService.saveCategory(category).then((response) => {
+      console.log(response);
+      navigate("/products");
+    })
       .catch((error) => {
         console.log(error);
       });

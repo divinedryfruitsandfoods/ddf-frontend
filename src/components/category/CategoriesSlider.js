@@ -48,8 +48,9 @@ function CategoriesSlider({ categories, deleteCategory }) {
       <div style={buttonStyle} onClick={() => setVisible(!visible)}>
         <NavLink to="/products/addcategory">
           <MdAddShoppingCart />
-          <AddCategory visible={visible} setVisible={setVisible} />
         </NavLink>
+        <AddCategory visible={visible} setVisible={setVisible} />
+
       </div>
       <Swiper
         // install Swiper modules
