@@ -17,11 +17,13 @@ const containerStyle = {
 
 const buttonStyle = {
   cursor: "pointer",
-  background: "blue",
+  background: "#444",
   textAlign: "right",
   float: "right",
   padding: "5px",
-  borderRadius: "10px"
+  borderRadius: "10px",
+
+  boxShadow: "1px 1px 1px 1px #ccc",
 };
 
 const pStyle = {

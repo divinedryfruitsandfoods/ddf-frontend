@@ -31,8 +31,6 @@ export default function AllProducts() {
     const result = await axios.get("http://localhost:3333/products").catch((err) => {
       console.log(err.message);
     });
-    console.log("Result");
-    console.log(result);
 
     setProducts(result.data);
   };
