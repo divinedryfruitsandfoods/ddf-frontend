@@ -165,14 +165,34 @@
     {
       "id": 1,
       "categoryImageUrl": "",
-      "categoryName": "Almondadsad",
-      "subCategoryName": "Californiadasa"
+      "categoryName": "Almonds",
+      "subCategoryName": "Aple Almonds"
     },
     {
       "id": 3,
       "categoryImageUrl": "",
-      "categoryName": "Almondadsad",
-      "subCategoryName": "Californiadasa"
+      "categoryName": "Cashew",
+      "subCategoryName": "Kolhapuri Cashew"
+    },
+    {
+      "id": 4,
+      "categoryName": "Pista",
+      "subCategoryName": "Pista One"
+    },
+    {
+      "id": 5,
+      "categoryName": "Raisines",
+      "subCategoryName": "Raisines one"
+    },
+    {
+      "id": 6,
+      "categoryName": "Walnut",
+      "subCategoryName": "Walnut one"
+    },
+    {
+      "id": 7,
+      "categoryName": "Vada Pav",
+      "subCategoryName": "Vada Pav One"
     }
   ]
 }

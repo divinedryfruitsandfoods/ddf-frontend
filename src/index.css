@@ -45,3 +45,6 @@ code {
 .CategorieSlider .swiper-slide {
   box-shadow: 1px 1px 1px 1px #ccc;
 }
+div > .addCategoryPopup {
+  background: #36333385;
+}
