@@ -185,30 +185,6 @@
       "categoryImageUrl": "",
       "categoryName": "Cashew",
       "subCategoryName": "W400"
-    },
-    {
-      "id": 5,
-      "categoryImageUrl": "",
-      "categoryName": "Walnut",
-      "subCategoryName": "American"
-    },
-    {
-      "id": 6,
-      "categoryImageUrl": "",
-      "categoryName": "Dates",
-      "subCategoryName": "Medjoul"
-    },
-    {
-      "id": 7,
-      "categoryImageUrl": "",
-      "categoryName": "Dates",
-      "subCategoryName": "Omani"
-    },
-    {
-      "id": 8,
-      "categoryImageUrl": "",
-      "categoryName": "Pista",
-      "subCategoryName": "California Salted"
     }
   ]
 }

@@ -19,9 +19,10 @@ export default function AllProducts() {
     getCategories();
   }, []);
   const getCategories = async () => {
-    const result = await axios.get("http://localhost:3333/categories").catch((err) => {
-      console.log(err.message);
-    });
+    const result = await axios.get("http://localhost:3333/categories")
+      .catch((err) => {
+        console.log(err.message);
+      });
     setCategories(result.data);
   };
 

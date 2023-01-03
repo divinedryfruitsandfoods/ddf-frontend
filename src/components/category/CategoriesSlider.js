@@ -22,7 +22,6 @@ const buttonStyle = {
   float: "right",
   padding: "5px",
   borderRadius: "10px",
-
   boxShadow: "1px 1px 1px 1px #ccc",
 };
 
@@ -41,15 +40,16 @@ function CategoriesSlider({ categories, deleteCategory }) {
   const navigate = useNavigate();
   const updateCategory = (e, id) => {
     e.preventDefault();
-    navigate(`/updateCategory/${id}`);
+    navigate(`/products/updateCategory/${id}`);
   };
 
   return (
     <>
       <div style={buttonStyle} onClick={() => setVisible(!visible)}>
-        <MdAddShoppingCart onClick={() => navigate("/products/addcategory")}>
+        <NavLink to="/products/addcategory">
+          <MdAddShoppingCart />
           <AddCategory visible={visible} setVisible={setVisible} />
-        </MdAddShoppingCart>
+        </NavLink>
       </div>
       <Swiper
         // install Swiper modules
