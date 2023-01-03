@@ -9,7 +9,7 @@ import NotFound from "./components/NotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import AddCategory from "./components/category/AddCategory";
-import EditCategory from "./components/category/UpdateCategory";
+import UpdateCategory from "./components/category/UpdateCategory";
 import Faq from "./components/Faq";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
             <Route activeClassName="active_class" path="addcategory" element={<AddCategory />}>
               {" "}
             </Route>
-            <Route activeClassName="active_class" path="updatecategory" element={<EditCategory />}>
+            <Route activeClassName="active_class" path="updatecategory/:id" element={<UpdateCategory />}>
               {" "}
             </Route>
           </Route>

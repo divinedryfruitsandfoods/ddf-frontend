@@ -4,8 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { MdAddShoppingCart } from "react-icons/md";
 import { AiOutlineDelete } from "react-icons/ai";
 import { GrUpdate } from "react-icons/gr";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import AddCategory from "./AddCategory";
+import UpdateCategory from "./UpdateCategory";
 
 const containerStyle = {
   display: "flex",
@@ -33,15 +34,20 @@ const categorySliderBlockquote = "rounded-lg bg-gray-100 p-2";
 const categorySliderFlexItems = "flex items-center";
 const categoryName = "mt-1 text-lg font-medium text-gray-700";
 const mt4 = "ml-4";
-function CategoriesSlider({ categories }) {
+function CategoriesSlider({ categories, deleteCategory }) {
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
+  const updateCategory = (e, id) => {
+    e.preventDefault();
+    navigate(`/updateCategory/${id}`);
+  };
+
   return (
     <>
       <div style={buttonStyle} onClick={() => setVisible(!visible)}>
-        <NavLink to="/products/addcategory">
-          <MdAddShoppingCart />
+        <MdAddShoppingCart onClick={() => navigate("/products/addcategory")}>
           <AddCategory visible={visible} setVisible={setVisible} />
-        </NavLink>
+        </MdAddShoppingCart>
       </div>
       <Swiper
         // install Swiper modules
@@ -71,13 +77,13 @@ function CategoriesSlider({ categories }) {
                 <div className={categorySliderFlexItems}>
                   <div className={mt4}>
                     <p className={categoryName}> {cat.categoryName}</p>
-                    <NavLink to="/products/updatecategory">
-                      <button className={updateCategoryStyles}>
-                        <GrUpdate />
-                      </button>
-                    </NavLink>
+                    <button
+                      onClick={(e, id) => updateCategory(e, cat.id)}
+                      className={updateCategoryStyles}>
+                      <GrUpdate />
+                    </button>
                     <button className={deleteCategoryStyles}>
-                      <AiOutlineDelete />
+                      <AiOutlineDelete onClick={(e, id) => deleteCategory(e, cat.id)} />
                     </button>
                     <Outlet />
                   </div>
