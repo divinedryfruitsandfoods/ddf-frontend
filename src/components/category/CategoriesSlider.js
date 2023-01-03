@@ -38,6 +38,7 @@ const mt4 = "ml-4";
 function CategoriesSlider({ categories, deleteCategory }) {
   const [visible, setVisible] = useState(false);
   const navigate = useNavigate();
+
   const updateCategory = (e, id) => {
     e.preventDefault();
     navigate(`/products/updateCategory/${id}`);
@@ -50,7 +51,6 @@ function CategoriesSlider({ categories, deleteCategory }) {
           <MdAddShoppingCart />
         </NavLink>
         <AddCategory visible={visible} setVisible={setVisible} />
-
       </div>
       <Swiper
         // install Swiper modules
@@ -67,6 +67,10 @@ function CategoriesSlider({ categories, deleteCategory }) {
             slidesPerView: 2,
           },
           768: {
+            // width: 768,
+            slidesPerView: 3,
+          },
+          1024: {
             // width: 768,
             slidesPerView: 5,
           },

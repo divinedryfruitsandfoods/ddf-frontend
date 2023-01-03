@@ -51,6 +51,11 @@ export default function AddCategory({ visible, setVisible }) {
             className={addCategorySubmit}>
             Add
           </button>
+          <button type="button"
+            onClick={() => setVisible(false)}
+            className={addCategorySubmit}>
+            Close
+          </button>
         </form>
       </Popup>
     </>
