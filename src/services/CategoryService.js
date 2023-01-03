@@ -4,7 +4,7 @@ const CATEGORY_API_BASE_URL = "http://localhost:3333/categories";
 
 class CategoryService {
     saveCategory(category) {
-        return axios.post(CATEGORY_API_BASE_URL, employee);
+        return axios.post(CATEGORY_API_BASE_URL, category);
     }
 
     getCategories() {
@@ -23,3 +23,5 @@ class CategoryService {
         return axios.put(CATEGORY_API_BASE_URL + "/" + id, category);
     }
 }
+
+export default CategoryService

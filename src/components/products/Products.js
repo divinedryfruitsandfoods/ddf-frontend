@@ -4,6 +4,8 @@ import Footer from "../Footer";
 import CategoriesSlider from "../category/CategoriesSlider";
 import ProductCard from "./ProductCard";
 import axios from "axios";
+import CategoryService from "../../services/CategoryService"
+
 
 const productsSection = "container m-auto my-5 mt-16";
 const productsSectionGrid = "grid grid-cols-1";
@@ -31,10 +33,18 @@ export default function AllProducts() {
     const result = await axios.get("http://localhost:3333/products").catch((err) => {
       console.log(err.message);
     });
-    console.log("Result");
-    console.log(result);
-
     setProducts(result.data);
+  };
+
+  const deleteCategory = (e, id) => {
+    e.preventDefault();
+    CategoryService.deleteCategory(id).then((res) => {
+      if (categories) {
+        setCategories((prevElement) => {
+          return prevElement.filter((category) => category.id !== id);
+        });
+      }
+    });
   };
 
   return (
@@ -43,7 +53,7 @@ export default function AllProducts() {
         <div className={productsSectionGrid}>
           <div className={productSliderColspan3}>
             <div className={swiperCategory}>
-              <CategoriesSlider categories={categories} />
+              <CategoriesSlider categories={categories} deleteCategory={deleteCategory} />
             </div>
             <div className={productCardStyle}>
               <ProductCard products={products} />
