@@ -22,6 +22,7 @@ function ProductCard({ products }) {
               </div>
               <div className={p3}>{product.productDescription} </div>
               <div className={p3}>
+                select quantity
                 <span className={productHashtagStyles}>#travel</span>
                 <span className={productHashtagStyles}>#travel</span>
               </div>

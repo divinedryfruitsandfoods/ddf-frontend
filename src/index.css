@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  padding-top: 60px;
+  /* padding-top: 60px; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +15,7 @@ code {
 }
 
 .active {
-  color: #fff;
+  /* color: #fff; */
   /* border-bottom: thin solid #fff; */
 }
 
