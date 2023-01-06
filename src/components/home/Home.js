@@ -19,7 +19,7 @@ function Home() {
       <FeaturedProducts />
       <Testimonials />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
