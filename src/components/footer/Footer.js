@@ -1,41 +1,45 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-const footerMain = "fixed inset-x-0 bottom-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800";
+import Link from "next/link";
+const footerMain = "fixed inset-x-0 bothrefm-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800";
 const footerSpanOne = "text-sm text-gray-500 sm:text-center dark:text-gray-400";
-const footerNavlinkOne = " hover:underline";
+const footerLinkOne = " hover:underline";
 const footerUl = "flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0";
 const mr4 = "mr-4";
-const footerNavlinkTwo = "mr-4 hover:underline md:mr-6";
+const footerLinkTwo = "mr-4 hover:underline md:mr-6";
+
 function Footer() {
   return (
     <footer className={footerMain}>
       <span className={footerSpanOne}>
         © 2022{" "}
-        <NavLink to="/" className={footerNavlinkOne}>
+        <Link href="/" className={footerLinkOne}>
           Divine Dry Fruits And Foods
-        </NavLink>
+        </Link>
+        <Link href="/" exact className="nav-item nav-link">Home</Link>
+
         . All Rights Reserved.
       </span>
       <ul className={footerUl}>
         <li className={mr4}>
-          <NavLink to="/about" className={footerNavlinkTwo}>
+          <Link href="/about" className={footerLinkTwo}>
             About
-          </NavLink>
+          </Link>
+
         </li>
         <li className={mr4}>
-          <NavLink to="/faq" className={footerNavlinkTwo}>
+          <Link href="/faq" className={footerLinkTwo}>
             FAQ
-          </NavLink>
+          </Link>
         </li>
         <li className={mr4}>
-          <NavLink to="/products" className={footerNavlinkTwo}>
+          <Link href="/products" className={footerLinkTwo}>
             Products
-          </NavLink>
+          </Link>
         </li>
         <li className={mr4}>
-          <NavLink to="/contact" className={footerNavlinkOne}>
+          <Link href="/contact" className={footerLinkOne}>
             Contact
-          </NavLink>
+          </Link>
         </li>
       </ul>
     </footer>

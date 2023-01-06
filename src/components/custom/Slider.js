@@ -12,8 +12,8 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 function Slider() {
   useEffect(() => {
-    window.scroll(0, 0)
-  }, [])
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>

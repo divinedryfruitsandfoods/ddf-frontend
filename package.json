@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.13",
     "@material-tailwind/react": "^1.2.4",
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,23 +12,22 @@
     "aos": "^2.3.4",
     "axios": "^1.2.2",
     "json-server": "^0.17.1",
+    "next": "^13.1.1",
     "react": "^18.2.0",
-    "react-animated-popup": "^0.1.8",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "react-slider-swiper": "^2.0.6",
+    "sass": "^1.57.1",
     "swiper": "^8.4.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "PORT=9000 react-scripts start",
     "json-server": "json-server --watch db.json --port 3333",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +49,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "eslint": "^7.22.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4"
   }
