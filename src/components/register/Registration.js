@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Registration() {
   return (
@@ -18,50 +19,38 @@ function Registration() {
                   <div className="lg:w-6/12 px-4 md:px-0">
                     <div className="md:p-12 md:mx-6">
                       <div className="text-center">
-                        <img className="mx-auto w-48" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" alt="logo" />
-                        <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">We are The Lotus Team</h4>
+                        <img className="mx-auto w-48 rounded-2xl" src="../images/logo.jpg" alt="logo" />
+                        <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">We Server Divine Quality</h4>
                       </div>
                       <form>
                         <p className="mb-4">Please create a new account</p>
-                        <div className="mb-4">
-                          <input
-                            type="text"
-                            className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            id="exampleFormControlInput1"
-                            placeholder="Username"
-                          />
-                        </div>
-                        <div className="mb-4">
-                          <input
-                            type="password"
-                            className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            id="exampleFormControlInput1"
-                            placeholder="Password"
-                          />
+                        <div class="grid grid-cols-6 gap-6">
+                          <div class="col-span-6 sm:col-span-3 mb-4">
+                            <input type="text" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlInput1" placeholder="Fullname" />
+                          </div>
+                          <div class="col-span-6 sm:col-span-3 mb-4">
+                            <input type="email" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlInput1" placeholder="Email" />
+                          </div>
+                          <div class="col-span-6 sm:col-span-3 mb-4">
+                            <input type="password" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlInput1" placeholder="New Password" />
+                          </div>
+                          <div class="col-span-6 sm:col-span-3 mb-4">
+                            <input type="password" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlInput1" placeholder="Confrim Password" />
+                          </div>
                         </div>
                         <div className="text-center pt-1 mb-12 pb-1">
-                          <button
-                            className="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
-                            type="button"
-                            data-mdb-ripple="true"
-                            data-mdb-ripple-color="light"
-                          >
-                            Log in
-                          </button>
-                          <a className="text-gray-500" href="#!">
+                          <Link className="inline-block px-6 py-2.5 text-white bg-blue-700 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3" type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/">
+                            Register
+                          </Link>
+                          {/* <a className="text-gray-500" href="#!">
                             Forgot password?
-                          </a>
+                          </a> */}
                         </div>
                         <div className="flex items-center justify-between pb-6">
                           <p className="mb-0 mr-2">Don't have an account?</p>
-                          <button
-                            type="button"
-                            className="inline-block px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                            data-mdb-ripple="true"
-                            data-mdb-ripple-color="light"
-                          >
-                            Danger
-                          </button>
+                          <Link href="/login" className="inline-block px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                            Login
+                          </Link>
                         </div>
                       </form>
                     </div>

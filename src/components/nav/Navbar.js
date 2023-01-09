@@ -4,12 +4,40 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from "@heroicons/react/24/outline";
+/*
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+*/
 
 const navigation = {
   categories: [
     {
       id: "dryfruits",
       name: "Dry Fruits",
+      featured: [
+        {
+          name: "ALmonds",
+          href: "#",
+          imageSrc: "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2969&q=80",
+          imageAlt: "Models sitting back to back, wearing Basic Tee in black and bone.",
+        },
+        {
+          name: "Pista",
+          href: "#",
+          imageSrc: "https://images.unsplash.com/photo-1502825751399-28baa9b81efe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
+          imageAlt: "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
+        },
+      ],
       sections: [
         {
           id: "almonds",
@@ -17,74 +45,89 @@ const navigation = {
           items: [
             { name: "California Almonds", href: "#" },
             { name: "Afgani Almonds", href: "#" },
-            { name: "Indian Almonds", href: "#" },
-            { name: "Irani Almonds", href: "#" },
             { name: "Sydney Almonds", href: "#" },
-            { name: "King Almonds", href: "#" },
-            { name: "Queen Almonds", href: "#" },
-            { name: "Jack Almonds", href: "#" },
-            { name: "Nice Almonds", href: "#" },
+            { name: "Indian Almonds", href: "#" },
+            { name: "American Almonds", href: "#" },
+            { name: "Afgani Almonds 1", href: "#" },
+            { name: "Sydney Almonds 1", href: "#" },
+            { name: "Dubai Almonds", href: "#" },
+            { name: "View All", href: "/products" },
           ],
         },
         {
-          id: "pista",
-          name: "Accessories",
+          id: "pistachio",
+          name: "Pistachio",
           items: [
-            { name: "California Pista", href: "#" },
-            { name: "Afgani Pista", href: "#" },
-            { name: "Indian Pista", href: "#" },
-            { name: "Irani Pista", href: "#" },
-            { name: "Sydney Pista", href: "#" },
+            { name: "California Pistachio", href: "#" },
+            { name: "Sydney Pistachio", href: "#" },
+            { name: "Indian Pistachio", href: "#" },
+            { name: "View All", href: "/products" },
           ],
         },
         {
-          id: "anjeer",
-          name: "Anjeer",
+          id: "Cashew",
+          name: "Cashew",
           items: [
-            { name: "California Anjeer", href: "#" },
-            { name: "Afgani Anjeer", href: "#" },
-            { name: "Indian Anjeer", href: "#" },
-            { name: "Irani Anjeer", href: "#" },
-            { name: "Sydney Anjeer", href: "#" },
+            { name: "Cashew 1", href: "#" },
+            { name: "Cashew 2", href: "#" },
+            { name: "Cashew 3", href: "#" },
+            { name: "Cashew 4", href: "#" },
+            { name: "View All", href: "/products" },
           ],
         },
       ],
     },
     {
-      id: "sweets",
-      name: "Sweets",
+      id: "foods",
+      name: "Foods",
+      featured: [
+        {
+          name: "Ladoo",
+          href: "#",
+          imageSrc: "https://images.unsplash.com/photo-1610508500445-a4592435e27e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3087&q=80",
+          imageAlt: "Drawstring top with elastic loop closure and textured interior padding.",
+        },
+        {
+          name: "Moti Ladoo",
+          href: "#",
+          imageSrc: "https://images.unsplash.com/photo-1635952346904-95f2ccfcd029?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          imageAlt: "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
+        },
+      ],
       sections: [
         {
-          id: "ladoos",
-          name: "Ladoos",
+          id: "ladoo",
+          name: "Ladoo",
           items: [
-            { name: "Dink Ladoo", href: "#" },
-            { name: "Besan Ladoo", href: "#" },
-            { name: "Rava Ladoo", href: "#" },
-            { name: "Pancharatna Ladoo", href: "#" },
-            { name: "Ragi Ladoo", href: "#" },
-            { name: "Nachni Ladoo", href: "#" },
-            { name: "Protine Ladoo", href: "#" },
+            { name: "Ladoo 1", href: "#" },
+            { name: "Ladoo 2", href: "#" },
+            { name: "Ladoo 3", href: "#" },
+            { name: "Ladoo 4", href: "#" },
+            { name: "Ladoo 5", href: "#" },
+            { name: "Ladoo 6", href: "#" },
+            { name: "Ladoo 7", href: "#" },
           ],
         },
         {
           id: "chakli",
           name: "Chakli",
           items: [
-            { name: "Butter Chakli", href: "#" },
-            { name: "Sejwan Chakli", href: "#" },
-            { name: "Bhajni Chakli", href: "#" },
-            { name: "Lasoon Chakli", href: "#" },
+            { name: "Chakli 1", href: "#" },
+            { name: "Chakli 2", href: "#" },
+            { name: "Chakli 3", href: "#" },
+            { name: "Chakli 4", href: "#" },
+            { name: "Chakli 5", href: "#" },
+            { name: "Chakli 6", href: "#" },
           ],
         },
         {
-          id: "shev",
-          name: "Shev",
+          id: "chiwda",
+          name: "Chiwda",
           items: [
-            { name: "Shev Boondi", href: "#" },
-            { name: "Barik Shev", href: "#" },
-            { name: "Jadi Shev", href: "#" },
-            { name: "Lasoon Shev", href: "#" },
+            { name: "Chiwda 1", href: "#" },
+            { name: "Chiwda 2", href: "#" },
+            { name: "Chiwda 3", href: "#" },
+            { name: "Chiwda 4", href: "#" },
           ],
         },
       ],
@@ -92,7 +135,7 @@ const navigation = {
   ],
   pages: [
     { name: "About", href: "/about" },
-    { name: "Stores", href: "/products" },
+    { name: "Contact", href: "#" },
   ],
 };
 
@@ -100,7 +143,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+export default function Example() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -108,12 +151,12 @@ export default function Navbar() {
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
-          <Transition.Child as={Fragment} enter="transition-opacity ease-linear duration-300" enterFrom="opacity-0" enterhref="opacity-100" leave="transition-opacity ease-linear duration-300" leaveFrom="opacity-100" leavehref="opacity-0">
+          <Transition.Child as={Fragment} enter="transition-opacity ease-linear duration-300" enterFrom="opacity-0" enterTo="opacity-100" leave="transition-opacity ease-linear duration-300" leaveFrom="opacity-100" leaveTo="opacity-0">
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
           <div className="fixed inset-0 z-40 flex">
-            <Transition.Child as={Fragment} enter="transition ease-in-out duration-300 transform" enterFrom="-translate-x-full" enterhref="translate-x-0" leave="transition ease-in-out duration-300 transform" leaveFrom="translate-x-0" leavehref="-translate-x-full">
+            <Transition.Child as={Fragment} enter="transition ease-in-out duration-300 transform" enterFrom="-translate-x-full" enterTo="translate-x-0" leave="transition ease-in-out duration-300 transform" leaveFrom="translate-x-0" leaveTo="-translate-x-full">
               <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
                 <div className="flex px-4 pt-5 pb-2">
                   <button type="button" className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400" onClick={() => setOpen(false)}>
@@ -136,6 +179,22 @@ export default function Navbar() {
                   <Tab.Panels as={Fragment}>
                     {navigation.categories.map((category) => (
                       <Tab.Panel key={category.name} className="space-y-10 px-4 pt-10 pb-8">
+                        <div className="grid grid-cols-2 gap-x-4">
+                          {category.featured.map((item) => (
+                            <div key={item.name} className="group relative text-sm">
+                              <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+                                <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
+                              </div>
+                              <Link href={item.href} className="mt-6 block font-medium text-gray-900">
+                                <span className="absolute inset-0 z-10" aria-hidden="true" />
+                                {item.name}
+                              </Link>
+                              <p aria-hidden="true" className="mt-1">
+                                Shop now
+                              </p>
+                            </div>
+                          ))}
+                        </div>
                         {category.sections.map((section) => (
                           <div key={section.name}>
                             <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium text-gray-900">
@@ -181,11 +240,11 @@ export default function Navbar() {
                 </div>
 
                 <div className="border-t border-gray-200 py-6 px-4">
-                  <Link href="#" className="-m-2 flex items-center p-2">
+                  <a href="#" className="-m-2 flex items-center p-2">
                     <img src="https://tailwindui.com/img/flags/flag-canada.svg" alt="" className="block h-auto w-5 flex-shrink-0" />
                     <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
                     <span className="sr-only">, change currency</span>
-                  </Link>
+                  </a>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
@@ -206,10 +265,10 @@ export default function Navbar() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <Link href="/">
+                <a href="/">
                   <span className="sr-only">Your Company</span>
                   <img className="h-12 rounded-2xl w-auto" src="/images/logo.jpg" alt="" />
-                </Link>
+                </a>
               </div>
 
               {/* Flyout menus */}
@@ -220,10 +279,10 @@ export default function Navbar() {
                       {({ open }) => (
                         <>
                           <div className="relative flex">
-                            <Popover.Button className={classNames(open ? "border-indigo-600 text-indigo-600" : "border-transparent text-gray-700 hover:text-gray-800", "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out")}>{category.name}</Popover.Button>
+                            <Popover.Button className={classNames(open ? "border-indigo-600 text-indigo-600" : "border-transparent text-gray-700 hver:text-gray-800", "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out")}>{category.name}</Popover.Button>
                           </div>
 
-                          <Transition as={Fragment} enter="transition ease-out duration-200" enterFrom="opacity-0" enterhref="opacity-100" leave="transition ease-in duration-150" leaveFrom="opacity-100" leavehref="opacity-0">
+                          <Transition as={Fragment} enter="transition ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100" leave="transition ease-in duration-150" leaveFrom="opacity-100" leaveTo="opacity-0">
                             <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500 z-10">
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
@@ -231,6 +290,22 @@ export default function Navbar() {
                               <div className="relative bg-white">
                                 <div className="mx-auto max-w-7xl px-8">
                                   <div className="grid grid-cols-2 gap-y-10 gap-x-8 py-16">
+                                    <div className="col-start-2 grid grid-cols-2 gap-x-8">
+                                      {category.featured.map((item) => (
+                                        <div key={item.name} className="group relative text-base sm:text-sm">
+                                          <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+                                            <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
+                                          </div>
+                                          <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                                            <span className="absolute inset-0 z-10" aria-hidden="true" />
+                                            {item.name}
+                                          </a>
+                                          <p aria-hidden="true" className="mt-1">
+                                            Shop now
+                                          </p>
+                                        </div>
+                                      ))}
+                                    </div>
                                     <div className="row-start-1 grid grid-cols-3 gap-y-10 gap-x-8 text-sm">
                                       {category.sections.map((section) => (
                                         <div key={section.name}>
@@ -240,9 +315,9 @@ export default function Navbar() {
                                           <ul role="list" aria-labelledby={`${section.name}-heading`} className="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
                                             {section.items.map((item) => (
                                               <li key={item.name} className="flex">
-                                                <Link href={item.href} className="hover:text-gray-800">
+                                                <a href={item.href} className="hover:text-gray-800">
                                                   {item.name}
-                                                </Link>
+                                                </a>
                                               </li>
                                             ))}
                                           </ul>
@@ -260,7 +335,7 @@ export default function Navbar() {
                   ))}
 
                   {navigation.pages.map((page) => (
-                    <Link key={page.name} href={page.href} className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
+                    <Link key={page.name} href={page.href} className="flex items-center text-sm text-gray-700 hover:text-gray-800">
                       {page.name}
                     </Link>
                   ))}
@@ -269,38 +344,38 @@ export default function Navbar() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <Link href="/login" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <Link href="/login" className="text-sm -m-2 block p-2 text-gray-900">
                     Sign in
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <Link href="/register" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <Link href="/register" className="text-sm text-gray-700 hover:text-gray-800">
                     Create account
                   </Link>
                 </div>
 
                 <div className="hidden lg:ml-8 lg:flex">
-                  <Link href="#" className="flex items-center text-gray-700 hover:text-gray-800">
+                  <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
                     <img src="https://tailwindui.com/img/flags/flag-canada.svg" alt="" className="block h-auto w-5 flex-shrink-0" />
                     <span className="ml-3 block text-sm font-medium">CAD</span>
                     <span className="sr-only">, change currency</span>
-                  </Link>
+                  </a>
                 </div>
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <Link href="#" className="p-2 text-gray-400 hover:text-gray-500">
+                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
-                  </Link>
+                  </a>
                 </div>
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <Link href="#" className="group -m-2 flex items-center p-2">
+                  <a href="#" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
                     <span className="sr-only">items in cart, view bag</span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

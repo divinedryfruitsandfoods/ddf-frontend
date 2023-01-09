@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-
 function Login() {
   return (
     <>
@@ -13,8 +12,8 @@ function Login() {
                   <div className="lg:w-6/12 px-4 md:px-0">
                     <div className="md:p-12 md:mx-6">
                       <div className="text-center">
-                        <img className="mx-auto w-48" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" alt="logo" />
-                        <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">We are The Lotus Team</h4>
+                        <img className="mx-auto w-48 rounded-2xl" src="../images/logo.jpg" alt="logo" />
+                        <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">We Server Divine Quality</h4>
                       </div>
                       <form>
                         <p className="mb-4">Please login to your account</p>
@@ -34,9 +33,9 @@ function Login() {
                         </div>
                         <div className="flex items-center justify-between pb-6">
                           <p className="mb-0 mr-2">Don't have an account?</p>
-                          <button type="button" className="inline-block px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                            Danger
-                          </button>
+                          <Link href="/register" className="inline-block px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                            Register
+                          </Link>
                         </div>
                       </form>
                     </div>
